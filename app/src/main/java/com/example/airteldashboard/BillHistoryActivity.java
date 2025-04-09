@@ -22,8 +22,6 @@ public class BillHistoryActivity extends AppCompatActivity {
 
         // Create a list of bills (you can fetch this from a database or API)
         billHistoryList = new ArrayList<>();
-        billHistoryList.add(new Bill("01/01/2025", "UGX 500"));
-        billHistoryList.add(new Bill("01/02/2025", "UGX 300"));
         billHistoryList.add(new Bill("01/03/2025", "UGX 700"));
 
         // Set up RecyclerView with an adapter

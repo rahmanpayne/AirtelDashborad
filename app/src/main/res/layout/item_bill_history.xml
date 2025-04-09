@@ -4,21 +4,45 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="?android:attr/selectableItemBackground">
+    android:gravity="center"
+    android:background="#AAFFFFFF">
 
+    <!-- Background image (placed behind using drawable background trick) -->
+    <ImageView
+        android:id="@+id/bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_airtel"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="Airtel background" />
+
+    <!-- Bill Details -->
     <TextView
         android:id="@+id/bill_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bill Date"
+        android:text="Bill Date: 05-Apr-2025"
         android:textSize="16sp"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:layout_marginTop="8dp" />
 
     <TextView
         android:id="@+id/bill_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bill Amount"
+        android:text="Bill Amount: ₹500"
         android:textSize="16sp"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:layout_marginTop="4dp" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#D32F2F"
+        android:textColor="#FFFFFF" />
 </LinearLayout>

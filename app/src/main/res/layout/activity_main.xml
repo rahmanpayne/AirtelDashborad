@@ -7,63 +7,77 @@
             type="com.example.airteldashboard.DashboardData" />
     </data>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:background="#FF7F7F"
-        android:gravity="center">
+        android:layout_height="match_parent">
 
-        <!-- Account Balance -->
-        <TextView
-            android:id="@+id/account_balance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{dashboard.accountBalance}"
-            android:textSize="24sp"
-            android:textColor="#000000"
-            android:layout_marginTop="32dp"/>
+        <!-- Background Image -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_airtel"
+            android:contentDescription="@string/app_name" />
 
-        <!-- Data Usage -->
-        <TextView
-            android:id="@+id/data_usage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{dashboard.dataUsage}"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:layout_marginTop="16dp"/>
+        <!-- Foreground UI with slight transparent white background -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="#AAFFFFFF">
 
-        <!-- Outstanding Bills -->
-        <TextView
-            android:id="@+id/outstanding_bills"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{dashboard.outstandingBills}"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:layout_marginTop="16dp"/>
+            <!-- Account Balance -->
+            <TextView
+                android:id="@+id/account_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dashboard.accountBalance}"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:layout_marginTop="32dp" />
 
-        <!-- Recharge Button -->
-        <Button
-            android:id="@+id/recharge_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Recharge Now"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="#FF4081"
-            android:textColor="#FFFFFF"/>
+            <!-- Data Usage -->
+            <TextView
+                android:id="@+id/data_usage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dashboard.dataUsage}"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginTop="16dp" />
 
-        <!-- View Bill History Button -->
-        <Button
-            android:id="@+id/bill_history_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View Bill History"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#6200EE"
-            android:textColor="#FFFFFF"/>
+            <!-- Outstanding Bills -->
+            <TextView
+                android:id="@+id/outstanding_bills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dashboard.outstandingBills}"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginTop="16dp" />
 
-    </LinearLayout>
+            <!-- Recharge Button -->
+            <Button
+                android:id="@+id/recharge_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recharge Now"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#FF4081"
+                android:textColor="#FFFFFF" />
+
+            <!-- View Bill History Button -->
+            <Button
+                android:id="@+id/bill_history_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Bill History"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#6200EE"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </FrameLayout>
 </layout>
